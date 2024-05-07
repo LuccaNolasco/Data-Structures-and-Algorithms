@@ -115,6 +115,11 @@ public class ListaEncadeada {
     }
   }
 
+  /*
+  
+  INICIO DA CLASSE ELEMENT
+   */
+
   public class Element {
     private Object data;
     private Element next;
@@ -153,7 +158,7 @@ public class ListaEncadeada {
         head = temp;
       } else {
         Element prevPtr = head;
-        while ((prevPtr != null && prevPtr != this)) {
+        while ((prevPtr != null && prevPtr.getNext() != this)) {
           prevPtr = prevPtr.next;
         }
         prevPtr.next = temp;
